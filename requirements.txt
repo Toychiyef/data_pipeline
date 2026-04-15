@@ -3,3 +3,4 @@ gspread
 numpy
 sqlalchemy
 psycopg2-binary
+oauth2client
