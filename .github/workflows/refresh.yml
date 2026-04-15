@@ -23,4 +23,4 @@ jobs:
       - name: Run script
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: python your_script.py
+        run: python pipeline.py
