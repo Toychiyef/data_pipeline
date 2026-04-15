@@ -3,4 +3,3 @@ gspread
 numpy
 sqlalchemy
 psycopg2-binary
-pyscopg2
