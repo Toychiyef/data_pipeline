@@ -2,6 +2,7 @@ import pandas as pd
 import gspread
 import urllib
 import numpy as np
+import os
 from oauth2client.service_account import ServiceAccountCredentials
 from sqlalchemy import create_engine, text
 
@@ -155,13 +156,9 @@ for col in id_cols:
 
 # connecting postgresql
 
-engine = create_engine(
-"postgresql://postgres.jnlsugovlvsdojpadakw:fleet020305$()@aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres")
+db_url = os.environ["DATABASE_URL"]
 
-# truncating table 
-
-# with engine.begin() as conn:
-#     conn.execute(text("TRUNCATE TABLE FleetPerformance"))
+engine = create_engine(db_url)
 
 print("Table truncated successfully.")
 
