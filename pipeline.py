@@ -165,11 +165,11 @@ engine = create_engine(db_url)
 
 # truncating table 
 
-with engine.begin() as conn:
-    conn.execute(text("TRUNCATE TABLE FleetPerformance"))
+  with engine.begin() as conn:
+      conn.execute(text("TRUNCATE TABLE FleetPerformance"))
     
-print("Table truncated successfully.")
-
+  print("Table truncated successfully.")
+  
 # with engine.begin() as conn:
 #     conn.execute(text("DROP TABLE IF EXISTS FleetPerformance"))
 
