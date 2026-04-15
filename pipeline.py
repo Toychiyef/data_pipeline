@@ -163,6 +163,11 @@ db_url = os.environ["DATABASE_URL"]
 
 engine = create_engine(db_url)
 
+# truncating table 
+
+with engine.begin() as conn:
+    conn.execute(text("TRUNCATE TABLE FleetPerformance"))
+    
 print("Table truncated successfully.")
 
 with engine.begin() as conn:
