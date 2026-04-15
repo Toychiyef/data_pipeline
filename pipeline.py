@@ -170,8 +170,8 @@ with engine.begin() as conn:
     
 print("Table truncated successfully.")
 
-with engine.begin() as conn:
-    conn.execute(text("DROP TABLE IF EXISTS FleetPerformance"))
+# with engine.begin() as conn:
+#     conn.execute(text("DROP TABLE IF EXISTS FleetPerformance"))
 
     conn.execute(text("""
     CREATE TABLE FleetPerformance (
