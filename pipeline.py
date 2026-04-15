@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 import gspread
 import urllib
 import numpy as np
@@ -14,8 +15,9 @@ scope = [
     "https://www.googleapis.com/auth/drive"
 ]
 
+creds_json = json.loads(os.environ["GOOGLE_CREDS_JSON"])
 creds = ServiceAccountCredentials.from_json_keyfile_name(
-    "citifuel-387a0ec421a9.json", scope
+    creds_json, scope
 )
 
 client = gspread.authorize(creds)
